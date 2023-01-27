@@ -22,8 +22,8 @@ const generateFitnessIdeas = async (req, res) => {
         frequency_penalty: 1,
         presence_penalty: 1,
       });
-      // const idea_result = response.data.choices[0].text;
-      const idea_result = response.data.choices;
+      const idea_result = response.data.choices[0].text;
+      // const idea_result = response.data.choices;
       res.status(200).json({
         success: true,
         data: idea_result
